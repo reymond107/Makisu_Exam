@@ -4,11 +4,11 @@ This is a mini version of tracking website if it is online or offline
 
 First you will need to get the following gems
 
-bootstrap
-jquery-rails
-json
-httparty
-devise
+bootstrap, 
+jquery-rails, 
+json, 
+httparty, 
+devise, 
 
 and run "bundle install"
 
