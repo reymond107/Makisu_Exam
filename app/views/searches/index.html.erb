@@ -1,0 +1,39 @@
+<h1>Website Tracker</h1>
+<hr>
+
+<%= form_tag searches_path, :method => 'POST' do %>
+  <div class="form-inline my-2 my-lg-0">
+      <%= text_field_tag :website, nil, placeholder: 'Eg. google.com', class: "form-control mr-sm-2" %>
+      <%= datetime_field_tag 'date',  class: "form-control mr-sm-0" %> |
+      <%= submit_tag 'Save', class: 'btn btn-outline-secondary my-2 my-sm-0' %>
+  </div>
+<% end %>
+
+<hr>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Website</th>
+      <th scope="col">Status</th>
+      <th scope="col">Date</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <% @searches.each do |website| %>  
+    <tbody>
+      <tr>
+        <th><%= website.website %></th>
+        <td>
+        <% if website.status == '200' %>
+          Up
+        <% else %>
+          Down
+        <% end %>
+        </td>
+        <th><%= website.date.strftime("%I:%M %P of %B %d, %Y") %></th>
+        <td><%= link_to 'Delete', website, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    </tbody>
+  <% end %>
+</table>

@@ -1,0 +1,9 @@
+<h3>Track Website</h3>
+
+  <%= form_tag website_path, :method => 'POST' do %>
+    <div class="form-inline my-2 my-lg-0">
+        <%= text_field_tag 'search', nil, placeholder: "Enter website name...", class: "form-control mr-sm-2" %>
+        <%= datetime_field_tag 'date',  class: "form-control mr-sm-0" %> |
+        <%= submit_tag 'Save', class: 'btn btn-outline-secondary my-2 my-sm-0' %>
+    </div>
+  <% end %>

@@ -1,0 +1,16 @@
+<div class="jumbotron">
+  <p class="lead"><strong><%= @output['host'] %></strong> as of <strong><%= @date.strftime("%I:%M %P of %B %d, %Y") %></strong> is </p>
+    <h1 class="display-4"><strong>       
+        <% if @output['response_code'] == 200 %>
+            Up
+        <% else %>
+            Down
+        <% end %></strong>
+    </h1>
+  <hr class="my-4">
+  <p>Click the button below keep track of other website.</p>
+  <p class="lead">
+    <%# <a class="btn btn-primary btn-lg" href="#" role="button">Save search</a> %>
+    <%= link_to "Track a website", searches_path ,  class: "btn btn-primary btn-lg" %>
+  </p>
+</div>
