@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a mini version of tracking website if it is online or offline
 
-Things you may want to cover:
+First you will need to get the following gems
 
-* Ruby version
+bootstrap, 
+jquery-rails, 
+json, 
+httparty, 
+devise, 
 
-* System dependencies
+and run "bundle install"
 
-* Configuration
+Please follow each documentation in setting up.
 
-* Database creation
+API from Isitdown.org is used to get data and show it to clients view
 
-* Database initialization
+Please enjoy using my little app and give suggestion for improvement
 
-* How to run the test suite
+deployed version to follow soon
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
